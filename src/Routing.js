@@ -1,5 +1,6 @@
 import React from 'react';
 import { BrowserRouter, Routes, Route } from 'react-router-dom';
+import Details from './components/Details/Details';
 
 import Footer from './components/Footer/Footer';
 import Header from './components/Header/Header';
@@ -19,6 +20,11 @@ const Routing = () => {
             link: "/products",
             element: <ProductsList />,
             id: 2
+        },
+        {
+            link: "/products/:id",
+            element: <Details />,
+            id: 3
         }
     ]
     let ADMIN_ROUTES = [

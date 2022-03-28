@@ -2,6 +2,7 @@ import React, { useState, useEffect, useContext } from 'react';
 import { List, message, Avatar } from 'antd';
 import VirtualList from 'rc-virtual-list';
 import { productsContext } from '../../contexts/productsContext';
+import { Link } from 'react-router-dom';
 const AdminProducts = () => {
     const { products, getProducts, deleteProduct } = useContext(productsContext)
     useEffect(() => {
@@ -21,9 +22,9 @@ const AdminProducts = () => {
                             avatar={<Avatar src={item.image1} />}
                             title={<a href='#'>{item.brand},{item.model}</a>}
                         />
-                        <div onClick={() => deleteProduct(item.id)}>Delete</div>
-                        <div style={{ margin: "auto 20px" }}>Edit</div>
-                        <div>Details</div>
+                        <a onClick={() => deleteProduct(item.id)}>Delete</a>
+                        <a style={{ margin: "auto 20px" }}>Edit</a>
+                        <Link to={`/products/${item.id}`}>Details</Link>
                     </List.Item>
                 )}
             </VirtualList>
