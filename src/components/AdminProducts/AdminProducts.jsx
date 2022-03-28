@@ -23,7 +23,7 @@ const AdminProducts = () => {
                             title={<a href='#'>{item.brand},{item.model}</a>}
                         />
                         <a onClick={() => deleteProduct(item.id)}>Delete</a>
-                        <a style={{ margin: "auto 20px" }}>Edit</a>
+                        <Link to={`/edit/${item.id}`} style={{ margin: "auto 20px" }}>Edit</Link>
                         <Link to={`/products/${item.id}`}>Details</Link>
                     </List.Item>
                 )}
