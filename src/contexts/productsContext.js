@@ -28,10 +28,15 @@ const ProductsContextProvider = ({ children }) => {
             payload: result
         })
     }
+    async function deleteProduct(id) {
+        await axios.delete(`${PRODUCTS_API}/${id}`)
+        getProducts()
+    }
     return (
         <productsContext.Provider value={{
             products: state.products,
-            getProducts
+            getProducts,
+            deleteProduct
         }}>
             {children}
         </productsContext.Provider>

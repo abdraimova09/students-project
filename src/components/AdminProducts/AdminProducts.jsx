@@ -3,7 +3,7 @@ import { List, message, Avatar } from 'antd';
 import VirtualList from 'rc-virtual-list';
 import { productsContext } from '../../contexts/productsContext';
 const AdminProducts = () => {
-    const { products, getProducts } = useContext(productsContext)
+    const { products, getProducts, deleteProduct } = useContext(productsContext)
     useEffect(() => {
         getProducts()
     }, [])
@@ -21,7 +21,9 @@ const AdminProducts = () => {
                             avatar={<Avatar src={item.image1} />}
                             title={<a href='#'>{item.brand},{item.model}</a>}
                         />
-                        <div>Content</div>
+                        <div onClick={() => deleteProduct(item.id)}>Delete</div>
+                        <div style={{ margin: "auto 20px" }}>Edit</div>
+                        <div>Details</div>
                     </List.Item>
                 )}
             </VirtualList>
