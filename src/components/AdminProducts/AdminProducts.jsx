@@ -11,18 +11,15 @@ const AdminProducts = () => {
     return (
         <List>
             <VirtualList
-                data={[]}
-                // height={ContainerHeight}
+                data={products}
                 itemHeight={47}
                 itemKey="email"
-            // onScroll={onScroll}
             >
                 {item => (
-                    <List.Item key={item.email}>
+                    <List.Item key={item.id}>
                         <List.Item.Meta
-                            avatar={<Avatar src={item.picture.large} />}
-                            title={<a href="https://ant.design">{item.name.last}</a>}
-                            description={item.email}
+                            avatar={<Avatar src={item.image1} />}
+                            title={<a href='#'>{item.brand},{item.model}</a>}
                         />
                         <div>Content</div>
                     </List.Item>
