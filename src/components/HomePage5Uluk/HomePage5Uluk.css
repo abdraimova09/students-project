@@ -1,0 +1,80 @@
+.main-pics {
+  margin: 20px;
+}
+.inner-pics {
+  width: 100%;
+  max-width: 1200px;
+  display: flex;
+  justify-content: space-around;
+  flex-direction: row;
+  text-align: center;
+  color: #000;
+}
+.card {
+  margin: 0 2px;
+  height: auto;
+}
+
+.main-text {
+  color: #85754e;
+  font-family: humanist;
+  font-size: 1em;
+  text-transform: uppercase;
+  letter-spacing: 0.4px;
+  font-weight: 400;
+}
+.secondary-text {
+  font-size: 0.82em;
+  text-transform: uppercase;
+  font-family: humanist, sans-serif;
+  font-weight: 100;
+}
+
+.affirm-logo {
+  max-width: 54px;
+  margin-right: 10px;
+  vertical-align: bottom;
+}
+.affirm-logo-text {
+  display: flex;
+  justify-self: center;
+  align-items: center;
+}
+.brand {
+  font-size: 16.15px;
+  font-family: humanist, Arial, sans-serif;
+  font-weight: 400;
+  letter-spacing: 0.1em;
+  font-size: 0.95em;
+  margin-bottom: 0;
+  margin-top: 0;
+  color: inherit;
+  text-align: inherit;
+  line-height: 1.2em;
+  text-transform: uppercase;
+}
+.model {
+  font-size: 1em;
+  font-weight: 300;
+  margin: 0 auto;
+  max-width: 90%;
+  margin-top: 10px;
+}
+.shop {
+  font-size: 1em;
+  font-weight: 300;
+  letter-spacing: 0;
+  text-transform: capitalize;
+  color: inherit;
+  margin: 0 auto;
+  margin-top: 15px;
+  background-color: transparent;
+  -webkit-transition: 0.9s ease-in-out;
+  transition: 0.9s ease-in-out;
+  text-decoration: underline;
+}
+.pic:hover {
+  background-color: #f1edeeb4;
+  opacity: 0.8;
+  transition: 0.3s ease-in-out;
+}
