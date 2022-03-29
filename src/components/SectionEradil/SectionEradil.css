@@ -11,6 +11,11 @@
 .top_img {
   width: 340px;
 }
+.top_img:hover {
+  opacity: 0.6;
+  cursor: pointer;
+  transition-duration: 1s;
+}
 .top_title {
   line-height: 60px;
   cursor: pointer;
