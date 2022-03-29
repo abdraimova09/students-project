@@ -1,23 +1,34 @@
 import React, { useContext, useEffect } from 'react';
 import { Button, Form, Select, Input, InputNumber } from 'antd';
 import { brands } from '../../helpers/brands';
-import { useParams } from 'react-router-dom';
+import { useNavigate, useParams } from 'react-router-dom';
 import { productsContext } from '../../contexts/productsContext';
 
 const EditProduct = () => {
     const params = useParams();
-    const { getOneProduct, oneProduct } = useContext(productsContext)
+    const { getOneProduct, oneProduct, updateProduct } = useContext(productsContext)
+    const [form] = Form.useForm()
+    const navigate = useNavigate()
     useEffect(() => {
         getOneProduct(params.id)
     }, [])
-    console.log(oneProduct);
+    useEffect(() => {
+        form.setFieldsValue(oneProduct)
+    }, [oneProduct])
+    // console.log(oneProduct);
+    function save(values) {
+        // console.log(values)
+        updateProduct(params.id, values)
+        navigate("/admin")
+    }
     return (
         <div className='container'>
             <h2>Edit product</h2>
             <Form
                 layout='vertical'
                 name='basic'
-            // onFinish={save}
+                form={form}
+                onFinish={save}
             >
                 <Form.Item label="Brand" name="brand" rules={[
                     {

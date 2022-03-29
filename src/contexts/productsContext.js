@@ -36,7 +36,7 @@ const ProductsContextProvider = ({ children }) => {
         getProducts()
     }
     async function getOneProduct(id) {
-        let result = await axios.get(`${PRODUCTS_API}/${id}`);
+        let result = await axios(`${PRODUCTS_API}/${id}`);
         dispatch({
             type: CASE_GET_ONE_PRODUCT,
             payload: result
@@ -46,6 +46,10 @@ const ProductsContextProvider = ({ children }) => {
         await axios.post(PRODUCTS_API, newProduct)
         getProducts()
     }
+    async function updateProduct(id, editedProduct) {
+        await axios.patch(`${PRODUCTS_API}/${id}`, editedProduct)
+        getProducts()
+    }
     return (
         <productsContext.Provider value={{
             products: state.products,
@@ -53,7 +57,8 @@ const ProductsContextProvider = ({ children }) => {
             getProducts,
             deleteProduct,
             getOneProduct,
-            createProduct
+            createProduct,
+            updateProduct
         }}>
             {children}
         </productsContext.Provider>
