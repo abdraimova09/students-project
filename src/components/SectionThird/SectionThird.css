@@ -1,0 +1,13 @@
+.title-wrapper {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 30px 0;
+}
+
+.content {
+  max-width: 600px;
+  color: black;
+  text-align: center;
+}
