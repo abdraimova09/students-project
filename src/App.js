@@ -4,12 +4,16 @@ import Routing from './Routing';
 import ProductsContextProvider from './contexts/productsContext';
 
 import './App.css';
+import HomePage from './components/HomePage9BlockCalibre/HomePage';
 
 const App = () => {
   return (
     <ProductsContextProvider>
       <Routing />
+      <HomePage/>
+      
     </ProductsContextProvider>
+    
   );
 };
 
