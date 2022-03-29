@@ -25,7 +25,7 @@ const reducer = (state = INIT_STATE, action) => {
 const ProductsContextProvider = ({ children }) => {
     const [state, dispatch] = useReducer(reducer, INIT_STATE)
     async function getProducts() {
-        let result = await axios(PRODUCTS_API);
+        let result = await axios(PRODUCTS_API + window.location.search);
         dispatch({
             type: CASE_GET_PRODUCTS,
             payload: result
