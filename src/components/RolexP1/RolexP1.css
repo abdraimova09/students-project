@@ -1,0 +1,61 @@
+.rolex {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-left: 170px;
+  margin-right: 170px;
+}
+
+span {
+  margin-right: 25px;
+  cursor: pointer;
+}
+
+span:hover {
+  color: green;
+  text-decoration: underline;
+}
+
+button {
+  color: green;
+  border-radius: 10px;
+  outline: 1px solid green;
+  border: none;
+  background-color: white;
+  padding: 6px 15px;
+  cursor: pointer;
+}
+
+button:hover {
+  background-color: green;
+  color: white;
+}
+
+.image {
+  margin: 20px 90px 40px 130px;
+}
+
+.text {
+  text-align: center;
+  color: #4b4b4b;
+}
+
+.text h3 {
+  letter-spacing: 4px;
+  font-size: 20px;
+}
+
+.text h1 {
+  font-weight: 500;
+  letter-spacing: 10px;
+  color: #4b4b4b;
+  font-size: 30px;
+}
+
+.text p {
+  width: 47%;
+  margin: 0 auto;
+  font-size: 16px;
+  font-weight: 300;
+  color: black;
+}
