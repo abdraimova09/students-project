@@ -4,6 +4,7 @@ import Brands from "./components/Brands/Brands";
 import Details from "./components/Details/Details";
 import EditProduct from "./components/EditProduct/EditProduct";
 
+import Abs from "./components/Abs/Abs";
 import Footer from "./components/Footer/Footer";
 import Header from "./components/Header/Header";
 import Home from "./components/Home/Home";
@@ -38,7 +39,11 @@ const Routing = () => {
       link: "/stores",
       element: <Stores />,
       id: 5
-    }
+    }, {
+      link: "/news",
+      element: <Abs />,
+      id: 19,
+    },
   ];
   let ADMIN_ROUTES = [
     {
