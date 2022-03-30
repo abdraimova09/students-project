@@ -4,11 +4,14 @@ import Routing from "./Routing";
 import ProductsContextProvider from "./contexts/productsContext";
 
 import "./App.css";
+import CartContextProvider from "./contexts/cartContext";
 
 const App = () => {
   return (
     <ProductsContextProvider>
-      <Routing />
+      <CartContextProvider>
+        <Routing />
+      </CartContextProvider>
     </ProductsContextProvider>
 
   );

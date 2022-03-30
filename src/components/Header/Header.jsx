@@ -1,12 +1,18 @@
-import React from 'react';
+import React, { useContext, useEffect } from 'react';
 import { Link } from 'react-router-dom';
 import { ShoppingOutlined } from '@ant-design/icons';
 
 import Navbar from '../Navbar/Navbar';
 
 import './Header.css';
+import { Badge } from 'antd';
+import { cartContext } from '../../contexts/cartContext';
 
 const Header = () => {
+    const { getCart, cartLength } = useContext(cartContext);
+    useEffect(() => {
+        getCart()
+    }, [])
     return (
         <>
             <div className='header'>
@@ -15,10 +21,12 @@ const Header = () => {
                     <img width="200px" src="https://content.thewosgroup.com/wosus/logo/wos_since_1924_uk_blk_notag.svg" alt="" />
                 </Link>
                 <Link to='/cart'>
-                    <ShoppingOutlined style={{
-                        fontSize: "30px",
-                        color: "black"
-                    }} />
+                    <Badge count={+cartLength} >
+                        <ShoppingOutlined style={{
+                            fontSize: "30px",
+                            color: "black"
+                        }} />
+                    </Badge>
                 </Link>
             </div>
             <Navbar />

@@ -1,11 +1,13 @@
-import React from 'react';
+import React, { useContext } from 'react';
 import { Card } from 'antd';
 import { EllipsisOutlined, HeartOutlined, ShoppingOutlined } from '@ant-design/icons';
 import { Link } from 'react-router-dom';
+import { cartContext } from '../../contexts/cartContext';
 
 const { Meta } = Card;
 
 const ProductCard = ({ item }) => {
+    const { addProductToCart } = useContext(cartContext)
     return (
         <Card
             style={{ width: "280px", margin: "10px" }}
@@ -17,7 +19,7 @@ const ProductCard = ({ item }) => {
             }
             actions={[
                 <HeartOutlined style={{ fontSize: "25px", color: "black" }} />,
-                <ShoppingOutlined style={{ fontSize: "25px", color: "black" }} />,
+                <ShoppingOutlined onClick={() => addProductToCart(item)} style={{ fontSize: "25px", color: "black" }} />,
                 <Link to={`/products/${item.id}`}><EllipsisOutlined style={{ fontSize: "25px", color: "black" }} key="ellipsis" /></Link>
                 ,
             ]}
