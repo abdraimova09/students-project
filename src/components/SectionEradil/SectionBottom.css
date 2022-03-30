@@ -1,0 +1,29 @@
+.section {
+  display: flex;
+  justify-content: space-evenly;
+  padding: 50px 0;
+}
+
+.section_bottom {
+  background: #f1f1f1;
+  width: 700px;
+  height: 200px;
+}
+.section_bottom {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.bottom_card {
+  text-align: center;
+}
+.bottom_descr_1:hover {
+  border-bottom: 1px solid black;
+  cursor: pointer;
+}
+
+.bottom_descr_2 {
+  border-bottom: 1px solid black;
+  line-height: 20px;
+  cursor: pointer;
+}

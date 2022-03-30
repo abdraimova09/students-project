@@ -4,13 +4,13 @@ import Routing from "./Routing";
 import ProductsContextProvider from "./contexts/productsContext";
 
 import "./App.css";
-import RolexCollectionAzim from "./components/RolexCollectionAzim/RolexCollectionAzim";
 
 const App = () => {
   return (
     <ProductsContextProvider>
       <Routing />
     </ProductsContextProvider>
+
   );
 };
 
