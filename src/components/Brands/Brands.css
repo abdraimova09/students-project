@@ -1,0 +1,33 @@
+.mixContainer {
+  display: flex;
+  /* flex-direction: column; */
+  flex-wrap: wrap;
+
+  max-width: 1000px;
+  font-size: 0;
+  margin: 0 auto;
+}
+
+.mix {
+  cursor: pointer;
+  width: 160px;
+  height: 160px;
+  background: rgb(247, 247, 247);
+  margin: 10px;
+}
+
+.mix img:hover {
+  /* background-color: #ccc; */
+  padding: 10px;
+  /* padding-left: ; */
+  /* width: 155px; */
+  /* height: 155px; */
+  text-align: center;
+  align-items: center;
+}
+
+.mix img {
+  width: 100%;
+  -webkit-transition: all 0.2s ease-out;
+  transition: all 0.2s ease-out;
+}

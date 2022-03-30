@@ -1,12 +1,12 @@
 import React from "react";
 import { BrowserRouter, Routes, Route } from "react-router-dom";
+import Brands from "./components/Brands/Brands";
 import Details from "./components/Details/Details";
 import EditProduct from "./components/EditProduct/EditProduct";
 
 import Footer from "./components/Footer/Footer";
 import Header from "./components/Header/Header";
 import Home from "./components/Home/Home";
-import HomePage5Uluk from "./components/HomePage5Uluk/HomePage5Uluk";
 import ProductsList from "./components/ProductsList/ProductsList";
 import AdminPage from "./pages/AdminPage";
 import Error404 from "./pages/Error404";
@@ -27,6 +27,11 @@ const Routing = () => {
       link: "/products/:id",
       element: <Details />,
       id: 3,
+    },
+    {
+      link: "/brands",
+      element: <Brands />,
+      id: 4,
     },
   ];
   let ADMIN_ROUTES = [
