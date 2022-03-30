@@ -4,13 +4,11 @@ import Routing from "./Routing";
 import ProductsContextProvider from "./contexts/productsContext";
 
 import "./App.css";
-import HomePageBekbolsun from "./components/HomePageBekbolsun/HomePageBekbolsun";
 
 const App = () => {
   return (
     <ProductsContextProvider>
       <Routing />
-      <HomePageBekbolsun />
     </ProductsContextProvider>
   );
 };
