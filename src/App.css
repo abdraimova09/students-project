@@ -1,15 +1,27 @@
 .container {
-    width: 80vw;
-    margin: 0 auto;
+  width: 80vw;
+  margin: 0 auto;
 }
 .products-list {
-    display: flex;
-    flex-wrap: wrap;
-    margin-top: 20px;
-    justify-content: center;
+  display: flex;
+  flex-wrap: wrap;
+  margin-top: 20px;
+  justify-content: center;
 }
 .products-search {
-    display: flex;
-    justify-content: space-between;
-    margin-top: 20px;
+  display: flex;
+  justify-content: space-between;
+  margin-top: 20px;
+}
+
+.stores_1 {
+  display: flex;
+  justify-content: space-between;
+  width: 80%;
+  margin: 30px auto;
+}
+
+.stores {
+  flex-direction: row;
+  text-align: center;
 }
