@@ -17,7 +17,7 @@ const Navbar = () => {
         },
         {
             title: "STORES",
-            link: "*",
+            link: "/stores",
             id: 3
         },
         {

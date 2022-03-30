@@ -8,6 +8,7 @@ import Footer from "./components/Footer/Footer";
 import Header from "./components/Header/Header";
 import Home from "./components/Home/Home";
 import ProductsList from "./components/ProductsList/ProductsList";
+import Stores from "./components/StoresUlan/Stores";
 import AdminPage from "./pages/AdminPage";
 import Error404 from "./pages/Error404";
 
@@ -33,6 +34,11 @@ const Routing = () => {
       element: <Brands />,
       id: 4,
     },
+    {
+      link: "/stores",
+      element: <Stores />,
+      id: 5
+    }
   ];
   let ADMIN_ROUTES = [
     {
