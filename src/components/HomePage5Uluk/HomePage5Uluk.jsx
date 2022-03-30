@@ -5,7 +5,7 @@ const { Meta } = Card;
 
 const HomePage5Uluk = () => {
   return (
-    <div className="main-pics">
+    <div className="main-pics container">
       <div className="inner-pics">
         <div className="card">
           <div className="affirm-logo-text">
