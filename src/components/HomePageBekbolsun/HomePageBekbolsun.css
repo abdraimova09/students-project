@@ -1,0 +1,34 @@
+.home {
+  width: 100%;
+  max-width: 1300px;
+  margin: 0 auto;
+}
+.home_inner {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.block2 {
+  display: flex;
+  flex-wrap: wrap;
+}
+.block3 {
+  margin: 0 20px;
+}
+.btn {
+  height: 49px;
+  background-color: rgb(54, 94, 54);
+  border: 1px solid rgb(54, 94, 54);
+  border-radius: 20px;
+  width: 220px;
+  position: absolute;
+  top: 52%;
+  right: 36%;
+  transition: 0.3s;
+  cursor: pointer;
+}
+.btn:hover {
+  background-color: black;
+  border: 1px solid black;
+  color: white;
+}
