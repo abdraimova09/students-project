@@ -6,7 +6,8 @@ import CarouselEldiyar from '../CarouselEldiyar/CarouselEldiyar'
 import HomePage5Uluk from '../HomePage5Uluk/HomePage5Uluk';
 import WachBrandAlsu from '../WachBrandAlsu/WachBrand'
 import Block7 from '../HomePage7BlockCardsChynara/HomePage7BlockCardsChynara'
-import SectionEradil from '../SectionEradil/SectionEradil'
+import SectionEradil from '../SectionEradil/SectionEradil';
+import Block9 from '../HomePage9BlockCalibre/HomePage'
 const Home = () => {
     return (
         <div>
@@ -18,6 +19,7 @@ const Home = () => {
             <WachBrandAlsu />
             <Block7 />
             <SectionEradil />
+            <Block9 />
         </div>
     );
 };

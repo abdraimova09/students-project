@@ -44,7 +44,6 @@ const Routing = () => {
   return (
     <BrowserRouter>
       <Header />
-      <HomePage5Uluk />
       <Routes>
         {PUBLIC_ROUTES.map((item) => (
           <Route key={item.id} path={item.link} element={item.element} />

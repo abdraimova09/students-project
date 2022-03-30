@@ -10,6 +10,7 @@ const App = () => {
     <ProductsContextProvider>
       <Routing />
     </ProductsContextProvider>
+
   );
 };
 
