@@ -6,6 +6,11 @@ import "./Navbar.css";
 const Navbar = () => {
     const NAV_ITEMS = [
         {
+            title: "ROLEX",
+            link: "/rolex",
+            id: 10
+        },
+        {
             title: "BRANDS A-Z",
             link: "/brands",
             id: 1,

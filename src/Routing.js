@@ -12,6 +12,7 @@ import ProductsList from "./components/ProductsList/ProductsList";
 import Stores from "./components/StoresUlan/Stores";
 import AdminPage from "./pages/AdminPage";
 import Error404 from "./pages/Error404";
+import RolexPage from "./pages/RolexPage";
 
 const Routing = () => {
   let PUBLIC_ROUTES = [
@@ -44,6 +45,11 @@ const Routing = () => {
       element: <Abs />,
       id: 19,
     },
+    {
+      link: "/rolex",
+      element: <RolexPage />,
+      id: 20
+    }
   ];
   let ADMIN_ROUTES = [
     {
