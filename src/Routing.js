@@ -13,6 +13,7 @@ import Stores from "./components/StoresUlan/Stores";
 import AdminPage from "./pages/AdminPage";
 import Error404 from "./pages/Error404";
 import RolexPage from "./pages/RolexPage";
+import Cart from "./components/Cart/Cart";
 
 const Routing = () => {
   let PUBLIC_ROUTES = [
@@ -39,8 +40,9 @@ const Routing = () => {
     {
       link: "/stores",
       element: <Stores />,
-      id: 5
-    }, {
+      id: 5,
+    },
+    {
       link: "/news",
       element: <Abs />,
       id: 19,
@@ -48,8 +50,13 @@ const Routing = () => {
     {
       link: "/rolex",
       element: <RolexPage />,
-      id: 20
-    }
+      id: 20,
+    },
+    {
+      link: "/cart",
+      element: <Cart />,
+      id: 21,
+    },
   ];
   let ADMIN_ROUTES = [
     {

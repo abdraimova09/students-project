@@ -23,7 +23,7 @@ const RolexP1 = () => {
         <img
           src="https://623a6e1cd70c9dbd3d3c-7dcd1a1af7ff1e866416ef4f946f2c74.ssl.cf3.rackcdn.com/rolex/landing-page-2019/banner_img_1680x260.jpg"
           alt="Rolex"
-          width="1500px"
+          width="100%"
         />
       </div>
       <div className="text">
