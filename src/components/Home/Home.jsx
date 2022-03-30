@@ -4,6 +4,7 @@ import HomePageWatchesBlock from '../HomePageWatchesBlock/HomePageWatchesBlock'
 import SectionThird from '../SectionThird/SectionThird'
 import CarouselEldiyar from '../CarouselEldiyar/CarouselEldiyar'
 import HomePage5Uluk from '../HomePage5Uluk/HomePage5Uluk';
+import WachBrandAlsu from '../WachBrandAlsu/WachBrand'
 const Home = () => {
     return (
         <div>
@@ -12,6 +13,7 @@ const Home = () => {
             <SectionThird />
             <CarouselEldiyar />
             <HomePage5Uluk />
+            <WachBrandAlsu />
         </div>
     );
 };

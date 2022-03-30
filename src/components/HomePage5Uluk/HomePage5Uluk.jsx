@@ -7,7 +7,7 @@ const HomePage5Uluk = () => {
   return (
     <div className="main-pics container">
       <div className="inner-pics">
-        <div className="card">
+        <div className="card-uluk">
           <div className="affirm-logo-text">
             <img
               className="affirm-logo"
@@ -30,7 +30,7 @@ const HomePage5Uluk = () => {
           <p className="model">Master Chronometer Certified</p>
           <p className="shop">Shop the Collection</p>
         </div>
-        <div className="card">
+        <div className="card-uluk">
           <h3 className="main-text">Authorized Luxury Retailer</h3>
           <p className="secondary-text">Now Available To Buy Online</p>
           <Card
@@ -47,7 +47,7 @@ const HomePage5Uluk = () => {
           <p className="model">Pioneering Time Zones</p>
           <p className="shop">Shop the Collection</p>
         </div>
-        <div className="card">
+        <div className="card-uluk">
           <h3 className="main-text">Free Home Delivery Available</h3>
           <p className="secondary-text">Estimated Delivery 1-3 Days</p>
           <Card
