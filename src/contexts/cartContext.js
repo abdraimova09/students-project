@@ -1,4 +1,5 @@
 import React, { useReducer } from 'react';
+import { calcSubPrice, calcTotalPrice } from '../helpers/calcPrice';
 import { CASE_GET_CART } from '../helpers/cases';
 
 export const cartContext = React.createContext()
@@ -27,6 +28,7 @@ const CartContextProvider = ({ children }) => {
             }
             localStorage.setItem("cart", JSON.stringify(cart))
         }
+        cart.totalPrice = calcTotalPrice(cart.products)
         dispatch({
             type: CASE_GET_CART,
             payload: cart
@@ -45,14 +47,68 @@ const CartContextProvider = ({ children }) => {
             count: 1,
             subPrice: product.price
         }
-        cart.products.push(newProduct)
+        let isProductInCart = cart.products.some((item) => item.item.id == newProduct.item.id)
+        if (isProductInCart) {
+            cart.products = cart.products.filter((item) => item.item.id != newProduct.item.id)
+        } else {
+            cart.products.push(newProduct)
+        }
+        cart.totalPrice = calcTotalPrice(cart.products)
         localStorage.setItem("cart", JSON.stringify(cart))
+    }
+    function checkItemInCart(id) {
+        let cart = JSON.parse(localStorage.getItem("cart"))
+        if (!cart) {
+            cart = {
+                products: [],
+                totalPrice: 0
+            }
+        }
+        let isProductInCart = cart.products.some((item) => item.item.id == id)
+        return isProductInCart
+    }
+    function deleteFromCart(id) {
+        let cart = JSON.parse(localStorage.getItem("cart"))
+        if (!cart) {
+            cart = {
+                products: [],
+                totalPrice: 0
+            }
+        }
+        cart.products = cart.products.filter((item) => item.item.id != id)
+        localStorage.setItem("cart", JSON.stringify(cart))
+        getCart()
+    }
+    function changeProductCount(count, id) {
+        if (count <= 0) {
+            count = 1
+        }
+        let cart = JSON.parse(localStorage.getItem("cart"))
+        if (!cart) {
+            cart = {
+                products: [],
+                totalPrice: 0
+            }
+        }
+        cart.products = cart.products.map((item) => {
+            if (item.item.id == id) {
+                item.count = count;
+                item.subPrice = calcSubPrice(item)
+            }
+            return item
+        })
+        cart.totalPrice = calcTotalPrice(cart.products)
+        localStorage.setItem("cart", JSON.stringify(cart))
+        getCart()
     }
     return <cartContext.Provider value={{
         cart: state.cart,
         cartLength: state.cartLength,
         getCart,
-        addProductToCart
+        addProductToCart,
+        checkItemInCart,
+        deleteFromCart,
+        changeProductCount
     }}>
         {children}
     </cartContext.Provider>

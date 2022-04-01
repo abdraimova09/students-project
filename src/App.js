@@ -5,15 +5,17 @@ import ProductsContextProvider from "./contexts/productsContext";
 
 import "./App.css";
 import CartContextProvider from "./contexts/cartContext";
+import AuthContextProvider from "./contexts/authContext";
 
 const App = () => {
   return (
-    <ProductsContextProvider>
-      <CartContextProvider>
-        <Routing />
-      </CartContextProvider>
-    </ProductsContextProvider>
-
+    <AuthContextProvider>
+      <ProductsContextProvider>
+        <CartContextProvider>
+          <Routing />
+        </CartContextProvider>
+      </ProductsContextProvider>
+    </AuthContextProvider>
   );
 };
 
